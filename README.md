@@ -1,11 +1,5 @@
-# wholesomecoolness
+# Wholesome Coolness
 
-This is the README for wholesomecoolness.
+This is a backup of <https://wholesomecoolness.comicgenesis.com>, which is a webcomic I made my senior year of high school and into my freshman year of college, around 2004/2005.
 
-## Changelog
-
-See `CHANGELOG.md`.
-
-## License
-
-Apache-2.0, see ``LICENSE``.
+Right now it's the scraper code I wrote to get that backup, plus some munging of the files to strip out some analytics calls and modify URLs. My eventual intent is to host them on a site I control... eventually.
