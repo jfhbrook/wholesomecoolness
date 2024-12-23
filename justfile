@@ -56,7 +56,7 @@ _clean-compile:
 
 # Generate the site
 generate:
-  . ./venv/bin/activate && python3 -m generator
+  . ./venv/bin/activate && python3 -m wholesomecoolness.generator
 
 #
 # Development tooling - linting, formatting, etc

@@ -3,12 +3,12 @@ requires = ["setuptools", "setuptools-scm", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "generator"
+name = "wholesomecoolness"
 version = "1.0.0"
 authors = [
   {name = "Josh Holbrook", email = "josh.holbrook@gmail.com"}
 ]
-description = "A custom generator for my old webcomic's site"
+description = "My old webcomic from 2004 - 2005"
 readme = "README.md"
 keywords = []
 license = { text = "Apache-2.0" }
@@ -35,17 +35,17 @@ dev = [
 
 [tool.isort]
 profile = "appnexus"
-known_application = "generator"
+known_application = "wholesomecoolness"
 
 [tool.pyright]
-include = ["generator", "tests"]
+include = ["wholesomecoolness", "tests"]
 
 [tool.pytest]
 addopts = "--verbose -s"
 testpaths = [ "tests" ]
 
 [tool.setuptools]
-packages = [ "generator" ]
+packages = [ "wholesomecoolness" ]
 
 [tool.setuptools.dynamic]
 dependencies = { file = ["requirements.txt"] }
