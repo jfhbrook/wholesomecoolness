@@ -1,0 +1,20 @@
+{% extends "base.html.j2" %}
+{% block content %}
+  {{ comic_nav }}
+  <img alt="Comic" border="0" src="{{ comic_url }}" width="650" height="787"><br>
+  {{ comic_nav }}
+  <br>
+  <br>
+
+  <table width="760"><tr><td>
+    <center>
+      <hr>
+      <b>Commentary:</b>
+      <br><u><i>{{ posted_at }}</i></u><br>
+    </center>
+
+    {{ commentary }}
+
+    <hr>
+  </td></tr></table>
+{% endblock %}
