@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wholesomecoolness"
+version = "1.0.0"
+authors = [
+  {name = "Josh Holbrook", email = "josh.holbrook@gmail.com"}
+]
+description = "My webcomic from ca 2005"
+readme = "README.md"
+keywords = []
+license = { text = "Apache-2.0" }
+dependencies = [
+  "scrapy"
+]
+
+
+[project.optional-dependencies]
+dev = [
+  "flake8",
+  "flake8-black",
+  "pytest",
+  "black",
+  "isort",
+  "jupyter-console",
+  "mkdocs",
+  "mkdocs-bootstrap386",
+  "mkdocstrings[python]",
+  "tox",
+  "twine",
+  "validate-pyproject[all]",
+]
+
+[tool.isort]
+profile = "appnexus"
+known_application = "wholesomecoolness"
+
+[tool.pyright]
+include = ["wholesomecoolness", "tests"]
+
+[tool.pytest]
+addopts = "--verbose -s"
+testpaths = [ "tests" ]
+
+[tool.setuptools]
+packages = [ "wholesomecoolness" ]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+optional-dependencies.dev = { file = ["requirements_dev.txt"] }
