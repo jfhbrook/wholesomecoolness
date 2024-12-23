@@ -1,7 +1,12 @@
 {% extends "base.html.j2" %}
 {% block content %}
   {{ comic_nav }}
-  <img alt="Comic" border="0" src="{{ comic_url }}" width="650" height="787"><br>
+  {% if alert %}
+    <p><b>{{ alert }}</b></p>
+  {% endif %}
+  {% block comic %}
+    <img alt="Comic" border="0" src="{{ comic_url }}" width="650" height="787"><br>
+  {% endblock %}
   {{ comic_nav }}
   <br>
   <br>
