@@ -22,6 +22,18 @@ class ComicSpider(scrapy.Spider):
         try:
             # Images
             for img in response.css("img::attr(src)").getall():
+                if img.startswith("//"):
+                    continue
+                if img.startswith("http"):
+                    continue
+                if img.startswith("/"):
+                    img = "https://wholesomecoolness.comicgenesis.com" + img
+                elif is_root:
+                    img = response.url + '/' + img
+                else:
+                    img = "/".join(response.url.split('/')[:-1] + [img])
+                if "wholesomecoolness" not in img:
+                    continue
                 yield response.follow(img, callback=self.parse)
             # Links
             for link in response.css("a::attr(href)").getall():
