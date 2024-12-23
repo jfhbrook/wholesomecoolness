@@ -67,7 +67,7 @@ pageTrackerCG._trackPageview();
 filename = sys.argv[1]
 
 with open(filename, 'r') as f:
-    contents = f.read() # .replace(ANALYTICS, '')
+    contents = f.read().replace(ANALYTICS, '')
 
 with open(filename, 'w') as f:
     f.write(contents)
