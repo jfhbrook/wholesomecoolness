@@ -1,0 +1,16 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<br>
+<table width="780"><tr><td>
+  <center>
+  <b>Ye Olde Archives:</b>
+  </center>
+  <p>
+    <ol>
+      {% for comic in archives %}
+        <li><a href="{{ comic.url }}">{{ comic.title }}</a></li>
+      {% endfor %}
+    </ol>
+  </p>
+</td></tr></table>
+{% endblock %}

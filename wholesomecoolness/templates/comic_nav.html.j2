@@ -1,2 +1,4 @@
-<a href="/d/20050209.html"><img alt="First comic" border="0" src="/images/first_day.png" width="69" height="75"></a> <a href="/d/20051113.html"><img alt="Previous comic" border="0" src="/images/previous_day.png" width="55" height="75"></a>  
+{% for button in nav %}
+  <a href="{{ button.url }}"><img alt="{{ button.alt }}" src="{{ button.src }}" border=0 width="{{ button.width }}" height="{{ button.height }}"/></a>
+{% endfor %}
 <br>
