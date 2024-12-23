@@ -1,16 +1,8 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
-Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xml:lang="en"
-xmlns="http://www.w3.org/1999/xhtml">
-<head><title>Wholesome Coolness - Sunday , November 20 , 2005</title>
-<meta http-equiv="Content-Type" content="text/html;
-charset=iso-8859-1" />
-</head>
-<div class="keen_ad" style="display:inline;">
+#!/usr/bin/env python
 
-<!-- Quantcast Tag -->
+import sys
+
+ANALYTICS = '''<!-- Quantcast Tag -->
 <script type="text/javascript">
 <!--//
 
@@ -69,21 +61,14 @@ pageTrackerCG._trackPageview();
 
 //-->
 </script>
-<!-- end google analytics -->
+<!-- end google analytics -->'''
 
-<iframe src="//forums.comicgenesis.com/tcontent.php?out=wholesomecoolness"
-id="eZFnF_o" name="eZFnF_o" style="display:inline;visibility:visible;" allowtransparency="true" scrolling="no" frameborder="0" 
-width="768" height="90">
-</iframe>
 
-</div>
-<div class="main">
-<h1>Wholesome Coolness</h1>
-<h2>by Joshua Holbrook</h2>
-<img src="/comics/wholesomecoolness.20050209.jpg">
-<br />
-<br />
-Wholesome Coolness is hosted on <a href="http://www.keenspace.com">Keenspace</a>, a free webhosting and site automation service for webcomics.
-</div>
-</body>
-</html>
+filename = sys.argv[1]
+
+with open(filename, 'r') as f:
+    contents = f.read() # .replace(ANALYTICS, '')
+
+with open(filename, 'w') as f:
+    f.write(contents)
+
