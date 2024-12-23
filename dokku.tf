@@ -72,7 +72,7 @@ module "app" {
   ssh_host = local.ssh_host
 
   letsencrypt = {
-    enable = false
+    enable = true
     email = local.letsencrypt_email
   }
 }
