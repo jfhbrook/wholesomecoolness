@@ -101,6 +101,7 @@ markdown==3.7
     #   mkdocs-autorefs
     #   mkdocstrings
     #   pymdown-extensions
+    #   wholesomecoolness (pyproject.toml)
 markdown-it-py==3.0.0
     # via rich
 markupsafe==3.0.2
@@ -218,6 +219,7 @@ pyyaml==6.0.2
     #   mkdocs-get-deps
     #   pymdown-extensions
     #   pyyaml-env-tag
+    #   wholesomecoolness (pyproject.toml)
 pyyaml-env-tag==0.1
     # via mkdocs
 pyzmq==26.2.0

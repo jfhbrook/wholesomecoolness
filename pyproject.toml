@@ -13,7 +13,9 @@ readme = "README.md"
 keywords = []
 license = { text = "Apache-2.0" }
 dependencies = [
-  "jinja2"
+  "jinja2",
+  "markdown",
+  "PyYAML",
 ]
 
 
