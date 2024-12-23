@@ -8,12 +8,12 @@ version = "1.0.0"
 authors = [
   {name = "Josh Holbrook", email = "josh.holbrook@gmail.com"}
 ]
-description = "My webcomic from ca 2005"
+description = "A custom generator for my old webcomic's site"
 readme = "README.md"
 keywords = []
 license = { text = "Apache-2.0" }
 dependencies = [
-  "scrapy"
+  "jinja2"
 ]
 
 
