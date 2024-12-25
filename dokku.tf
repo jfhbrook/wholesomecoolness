@@ -66,7 +66,7 @@ provider "dokku" {
 }
 
 module "app" {
-  source = "git::ssh://git@github.com/jfhbrook/tf-modules//dokku-deployment?ref=v1.1.0"
+  source = "git::ssh://git@github.com/jfhbrook/terraform-dokku-deployment?ref=1.0"
 
   hostname = local.hostname
   ssh_host = local.ssh_host
