@@ -12,7 +12,7 @@ variable "op_ssh_key" {
 
 locals {
   hostname = "thisistheremix.dev"
-  ssh_host = "lil-nas-x.local"
+  ssh_host = "thisistheremix.local"
   letsencrypt_email = "josh.holbrook@gmail.com"
 }
 
